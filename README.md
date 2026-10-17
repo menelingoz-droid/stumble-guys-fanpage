@@ -1,18 +1,12 @@
-# Stumble Guys Fanpage
+# Stumble Zone — publikacja na GitHub Pages
 
-Nieoficjalne repozytorium zawierające prostą stronę informacyjną dla społeczności gry Stumble Guys.
+Strona jest przygotowana pod darmowy adres GitHub Pages. Duże pliki APK i MOV nie są częścią źródeł strony; dodaj je jako pliki wydania GitHub (Release).
 
-Zawartość:
-- index.html — statyczna strona główna (HTML + CSS)
-- .gitignore — przydatne wpisy ignorujące pliki tymczasowe
-- README.md — ten plik
+## Publikacja
 
-Jak uruchomić
-- Otwórz `index.html` w przeglądarce (plik jest statyczny, nie wymaga serwera).
-- Możesz też hostować stronę na GitHub Pages z gałęzi `main` (Settings → Pages).
+1. Utwórz publiczne repozytorium o nazwie `stumble-guys-fanpage`.
+2. Dodaj do repozytorium `index.html`, `.gitignore` i ten plik `README.md`.
+3. W repozytorium otwórz **Settings → Pages** i wybierz publikację z gałęzi `main`, folder `/ (root)`.
+4. Otwórz **Releases → Create a new release**, utwórz tag (np. `v1.0`) i dołącz pliki `SGA-v0.103.0-p166-GUYS01.apk` oraz `SGAREKLAMA.mov`.
 
-Wkład
-- Masz pomysł? Otwórz issue lub wyślij pull request z propozycją treści, stylów lub nowych sekcji.
-
-Licencja
-- Dodaj plik LICENSE jeśli chcesz opublikować stronę na określonych warunkach licencyjnych.
+Strona wykrywa adres `konto.github.io/stumble-guys-fanpage` i pobiera multimedia z najnowszego wydania. W lokalnym podglądzie korzysta z plików obok `index.html`.
