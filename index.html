@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stumble Guys Fanpage</title>
+  <meta name="description" content="Fanpage społecznościowy dla gry Stumble Guys — newsy, porady, wydarzenia i społeczność." />
+  <style>
+    :root{--accent:#ff6b6b;--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{background:linear-gradient(180deg,#071023 0%, #071827 60%);color:#eef2f7;line-height:1.5}
+    .container{max-width:980px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .logo{font-weight:700;font-size:1.25rem;color:var(--accent)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:36px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);border-radius:12px}
+    .hero h1{margin:0;font-size:2rem}
+    .hero p{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .card{background:rgba(255,255,255,0.03);padding:18px;border-radius:10px}
+    footer{margin-top:36px;padding:18px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+    @media (max-width:800px){.grid{grid-template-columns:1fr}.hero{padding:20px}}
+    .faq dt{font-weight:600;margin-top:12px}
+    .badge{display:inline-block;padding:6px 10px;background:linear-gradient(90deg,var(--accent),#ff9a9a);border-radius:999px;color:#071022;font-weight:700}
+    .contact input,.contact textarea{width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Stumble Guys Fanpage</div>
+      <nav aria-label="Nawigacja">
+        <a href="#about">O nas</a>
+        <a href="#features">Funkcje</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div>
+          <span class="badge">Fanpage</span>
+          <h1>Witaj na nieoficjalnym fanpage'u Stumble Guys</h1>
+          <p>Nowości, poradniki, wydarzenia społeczności i miejsce do dzielenia się najlepszymi memami z rozgrywek.</p>
+        </div>
+        <div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
+            <a href="#features" style="background:var(--accent);color:#071022;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600">Zacznij</a>
+            <a href="#contact" style="border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--muted)">Dołącz do społeczności</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:20px">
+        <h2>O stronie</h2>
+        <p class="muted">Ten projekt to prosta strona informacyjna dla graczy Stumble Guys — możesz ją rozbudować o bloga, galerie, czy system wydarzeń.</p>
+      </section>
+
+      <section id="features" style="margin-top:18px">
+        <h2>Co znajdziesz</h2>
+        <div class="grid">
+          <div class="card"><h3>Poradniki</h3><p class="muted">Porady dla nowych i zaawansowanych graczy — jak przejść najtrudniejsze tory.</p></div>
+          <div class="card"><h3>Wydarzenia</h3><p class="muted">Harmonogram turniejów i spotkań społeczności.</p></div>
+          <div class="card"><h3>Galeria</h3><p class="muted">Najlepsze momenty, memy i nagrania od graczy.</p></div>
+        </div>
+      </section>
+
+      <section id="rewards" style="margin-top:18px">
+        <h2>Nagrody & Wyzwania</h2>
+        <p>Pomysły na wyzwania społecznościowe i drobne nagrody (np. wyróżnienia w poście) — rozważ integrację z Discordem lub systemem komentarzy.</p>
+      </section>
+
+      <section id="faq" style="margin-top:18px">
+        <h2>FAQ</h2>
+        <dl class="faq">
+          <dt>Czy to oficjalna strona gry?</dt>
+          <dd>Nie — jest to nieoficjalna inicjatywa społecznościowa.</dd>
+
+          <dt>Jak mogę dołączyć?</dt>
+          <dd>Skontaktuj się przez sekcję kontaktową poniżej lub otwórz issue w repozytorium z propozycją.</dd>
+        </dl>
+      </section>
+
+      <section id="contact" style="margin-top:18px">
+        <h2>Kontakt</h2>
+        <form class="contact" onsubmit="alert('Formularz demo — wyślij wiadomość przez issue lub PR.');return false;">
+          <label>Imię / nick
+            <input type="text" name="name" placeholder="Twój nick" required>
+          </label>
+          <label style="display:block;margin-top:8px">Wiadomość
+            <textarea name="message" rows="4" placeholder="Cześć! Chcę pomóc..." required></textarea>
+          </label>
+          <div style="margin-top:10px">
+            <button style="background:var(--accent);border:none;padding:10px 14px;border-radius:8px;color:#071022;font-weight:700">Wyślij</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div>Repozytorium: <a href="https://github.com/menelingoz-droid/stumble-guys-fanpage" style="color:var(--muted)">menelingoz-droid/stumble-guys-fanpage</a></div>
+      <div style="margin-top:6px">Plików: index.html • README.md • .gitignore</div>
+    </footer>
+  </div>
+</body>
+</html>
